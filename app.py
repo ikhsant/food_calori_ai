@@ -11,10 +11,10 @@ app.config['UPLOAD_FOLDER'] = 'static/uploads'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 # Load pre-trained food detection model (replace with your food model if available)
-model = YOLO("yolov8s.pt")  # Replace with yolov8s-food.pt if you have one
+model = YOLO("best.pt")  # Replace with yolov8s-food.pt if you have one
 
 # Gemini API config
-GEMINI_API_KEY = "AIzaSyDOSC1SkNFsKJg2oKsLh5X3AtUlJ5Zm0fY"
+GEMINI_API_KEY = "YOUR_GEMINI_API"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + GEMINI_API_KEY
 
 @app.route('/')
